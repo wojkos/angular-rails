@@ -1,0 +1,32 @@
+development:
+  adapter:  postgresql
+  host:     localhost
+  port:     5432
+  encoding: unicode
+  database: freelance_documents_development
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
+
+test:
+  adapter:  postgresql
+  host:     localhost
+  port:     5432
+  encoding: unicode
+  database: freelance_documents_test
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
+
+production:
+  adapter:  <%= ENV['FREELANCEDOCUMENTS_PROD_ADAPTER'] %>
+  host:     <%= ENV['FREELANCEDOCUMENTS_PROD_HOST'] %>
+  port:     <%= ENV['FREELANCEDOCUMENTS_PROD_PORT'] %>
+  encoding: unicode
+  database: <%= ENV['FREELANCEDOCUMENTS_PROD_DATABASE'] %>
+  pool:     5
+  username: <%= ENV['FREELANCEDOCUMENTS_PROD_USER'] %>
+  password: <%= ENV['FREELANCEDOCUMENTS_PROD_PASS'] %>
+  template: template0

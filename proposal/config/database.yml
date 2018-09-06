@@ -1,0 +1,33 @@
+development:
+  adapter:  postgresql
+  host:     localhost
+  port:     5432
+  encoding: unicode
+  database: freelance_proposal_development
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
+
+test:
+  adapter:  postgresql
+  host:     localhost
+  port:     5432
+  encoding: unicode
+  database: freelance_proposal_test
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
+
+production:
+  adapter:  <%= ENV['FREELANCPROPOSAL_PROD_ADAPTER'] %>
+  host:     <%= ENV['FREELANCPROPOSAL_PROD_HOST'] %>
+  port:     <%= ENV['FREELANCPROPOSAL_PROD_PORT'] %>
+  encoding: unicode
+  database: <%= ENV['FREELANCPROPOSAL_PROD_DATABASE'] %>
+  pool:     5
+  username: <%= ENV['FREELANCPROPOSAL_PROD_USER'] %>
+  password: <%= ENV['FREELANCPROPOSAL_PROD_PASS'] %>
+  template: template0
+  
